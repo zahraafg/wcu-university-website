@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <section class="one">
+            <div class="logo">
+                <span class="material-symbols-outlined" style="font-size: 70px; color: white; margin: 10">
+                school
+            </span>
+        </div>
+        
+        <div class="menu">
+            <ul>
+                <li class="dropdown"><a href="#" class="dropbtn">Universitet</a>
+                    <div class="dropdown-content">
+                        <a href="#">Haqqımızda</a>
+                        <a href="#">Sosial həyat</a>
+                        <a href="#">Tələbə həyatı</a>
+                        <a href="#">Vakansiyalar</a>
+                        <a href="#">Maliyyə hesabatı</a>
+                    </div>  
+                </li>
+
+                <li class="dropdown"><a href="#" class="dropbtn">Xəbərlər</a>
+                    <div class="dropdown-content">
+                        <a href="#">Xəbər lenti</a>
+                        <a href="#">Elanlar və Tədbirlər</a>
+                        <a href="#">Universitet elmi xəbərləri</a>
+                        <a href="#">Dünya elmi xəbərləri</a>
+                        <a href="#">Tələbə xəbərləri</a>
+                    </div>  
+                </li>
+
+                <li><a href="#" >Akademik</a></li>
+                <li><a href="#" >Akademik</a></li>
+                <li><a href="#" >Qəbul</a></li>
+                <li><a href="#" >Kitabxana</a></li>
+                <li><a href="#" >Beynəlxalq əlaqələr ofisi</a></li>
+                <li><a href="#" >Elmi fəaliyyət</a></li>
+            </ul>
+        </div>
+        </section>
+
+        <script>
+            window.addEventListener('load', function() {
+                document.addEventListener('click', function(event) {
+                    // Bütün açıq menyuları bağlayır
+                    document.querySelectorAll('.dropdown-content').forEach(function(el) {
+                        if (!el.contains(event.target) && !el.previousElementSibling.contains(event.target)) {
+                            el.classList.remove('show');
+                        }
+                    });
+    
+                    // Əgər klik olunan element "dropbtn"dirsə, menyunu açır/qapadır
+                    if (event.target.classList.contains('dropbtn')) {
+                        event.target.nextElementSibling.classList.toggle('show');
+                    }
+                });
+            });
+        </script>
+
+        <section class="mail">
+            <div class="first">
+                <span><a href="index.html">Ana səhifə >  </a></span>
+                <span>Tələbə kabineti</span>
+            </div>
+            <div class="second">
+                <h1>Tələbələr üçün şəxsi kabinetə giriş</h1>
+                <form action="">
+                    <input type="email" required placeholder="Email"><br>
+                    <input type="password" required placeholder="Password"><br>
+                    <button type="submit">Daxil ol</button>
+                </form>
+                <img src="https://wcu.edu.az/resources/css/img/mywcu.png" alt="">
+            </div>
+        </section>
+
+        <section class="seven">
+            <div class="left">
+                <h1>Contacts</h1>
+                <p>
+                    <span class="material-symbols-outlined"> 
+                        location_on
+                    </span>31 , Istiglaliyyat Street , Baku , Azerbaijan , AZ1001
+                </p>
+
+                <p>
+                    <span class="material-symbols-outlined"> 
+                        call
+                    </span>(+944 12) 492 74 18
+                </p>
+
+                <p style="margin-top: 80px;"><p>© 2024 Western Caspian University</p>
+
+            </div>
+
+
+            <div class="center">
+                <h1>Follow us</h1>
+                <p>
+                    <span class="material-symbols-outlined">
+                        thumb_up
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        raven
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        photo_camera
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        send
+                    </span>
+                </p>
+
+                <p>The Official Anthem of the University</p>
+                <audio  controls>
+                    <source src="https://www.wcu.edu.az/resources/css/img/gimn.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+
+            <div class="right">
+                <h1>Newsletter</h1>
+                <div class="input-group">
+                    <input type="text" placeholder="Your e-mail adress" style="width:270px; background-color: transparent; border:1px solid white;">
+                    <input type="button" value="Subscribe" style="width: 100px; border:1px solid white;"> 
+                </div>
+            </div>
+
+        </section>
+        
+        <button class="btn" onclick="toggleBox()">
+            <span class="material-symbols-outlined" style="font-size: 50px;">
+                mail
+            </span>
+        </button>
+        
+        <div class="box">
+            <h2>Box content</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <button>Send</button>
+            <button onclick="toggleBox()">Close</button>
+        </div>
+
+        <script>
+            function toggleBox() {
+                const box = document.querySelector('.box');
+                box.style.display = (box.style.display === 'none' || box.style.display === '' ) ? 'block' : 'none';
+            }
+        </script>
+
+    </div>
+</body>
+</html>
